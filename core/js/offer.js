@@ -1,0 +1,3 @@
+function closepopup(){$.magnificPopup.close();};$.getJSON(brandModelUrl,function(result){var response=result;$("#brand_id").select2({data:response.data,matcher:matchCustom,placeholder:"Select a Car",allowClear:true,dropdownParent:$("#car_select")});});var formActionUrl="";$('#brand_id').on("select2:select",function(e){if(formActionUrl=="")
+formActionUrl=$(this).closest('form')[0].action
+$(this).closest('form')[0].action=formActionUrl+"/"+e.params.data.seo+"-car-service";});
