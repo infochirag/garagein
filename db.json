@@ -1,0 +1,35 @@
+{
+  "getPricing": [
+    {
+      "loda": "lassun"
+    },
+    {
+      "category": "mahindra",
+      "choices": "TUV 300",
+      "fuel": "petrol",
+      "service": "clutch",
+      "id": "1"
+    },
+    {
+      "category": "maruti",
+      "choices": "M 800",
+      "fuel": "diesel",
+      "service": "clutch",
+      "id": "212"
+    },
+    {
+      "category": "mahindra",
+      "choices": "Xylo",
+      "fuel": "petrol",
+      "service": "ac",
+      "id": "10000000"
+    },
+    {
+      "category": "datsun",
+      "choices": "Go +",
+      "fuel": "diesel",
+      "service": "clutch",
+      "id": "22222222222"
+    }
+  ]
+}

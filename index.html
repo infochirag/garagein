@@ -97,7 +97,7 @@
 <li><a href="#"><div>Corporate</div></a></li>
 </ul>
 </li>
-<li><a href="#" data-backdrop="static" data-keyboard="false" onclick="openLoginModal()" data-toggle="modal" data-target="#myModal"><div>Login</div></a></li>
+<!--<li><a href="#" data-backdrop="static" data-keyboard="false" onclick="openLoginModal()" data-toggle="modal" data-target="#myModal"><div>Login</div></a></li>-->
 </ul>
 
 <div ng-controller="cartCtrl" id="top-cart">
@@ -194,7 +194,7 @@
           <div class="w3-half w3-margin-bottom">
             <label><i class="fa fa-free-code-camp"></i> <b>Enter Fuel Type </b></label>
             
-            <select class="w3-select w3-round-xlarge w3-border" name="">
+            <select class="w3-select w3-round-xlarge w3-border" name="fuel">
      	    <option value = "Select"> Select Fuel Type </option>
  	    <option value = "petrol">Petrol </option>
 	    <option value = "diesel">Diesel </option>
@@ -202,7 +202,7 @@
           </div>
           <div class="w3-half">
             <label><i class="fa fa-child"></i> <b>Enter Service </b></label>
-            <select class="w3-select w3-round-xlarge w3-border" name = "" >
+            <select class="w3-select w3-round-xlarge w3-border" name = "service" >
      	   <option value = "Select"> Select Service  </option>
            <option value="general">General Repairs</option>
            <option value="clutch">Clutch Repairs</option>
@@ -212,12 +212,18 @@
            <option value="ac">A/C Repairs</option>
 </select>
           </div>
+ <div class="w3-row-padding" style="margin:8px -16px;">
+          <div class="w3-half w3-margin-bottom">
+            <label><i class="fa fa-free-code-camp"></i> <b>Enter Mobile number </b></label>
+     	    <input type="text" name="id">
+          </div>
+</div>
         </div>
 <!-- Div for mobile input and service input -->
 
 
 <!-- div --> 
-        <button class="w3-button w3-round-xlarge w3-blue" type="submit"><i class="fa fa-search w3-margin-right"></i> Check Price</button>
+        <button class="w3-button w3-round-xlarge w3-blue" type="submit" name= "submit" id="submit"><i class="fa fa-search w3-margin-right"></i> Check Price</button>
       </form>
     </div>
   </div>
@@ -559,8 +565,8 @@
 <div class="fbox-icon">
 <i class="icon-ok"></i>
 </div>
-<h3>Genuine Spare Parts</h3>
-<p>We use OEM & genuine spare parts to ensure a premium service quality for your car</p>
+<h5><b>Genuine Spare Parts</b></h5>
+<p >We use OEM & genuine spare parts to ensure a premium service quality for your car</p>
 </div>
 </div>
 </div>
@@ -570,8 +576,8 @@
 <div class="fbox-icon">
 <i class="icon-ok"></i>
 </div>
-<h3>Workshops nearest to your location</h3>
-<p>Our workshops are located all over Jaipur, So you can always find a service station near your location</p>
+<h5><b>Workshops nearest to your location</b></h5>
+<p>Our workshops are located all over Jaipur, So <br>you can always find a service station near your location</p>
 </div>
 </div>
 </div>
@@ -581,7 +587,7 @@
 <div class="fbox-icon">
 <i class="icon-ok"></i>
 </div>
-<h3>Affordable & upfront pricing</h3>
+<h5><b>Affordable & upfront pricing</b></h5>
 <p>With our best in market pricings you can save upto 40% on all car services & repairs.</p>
 </div>
 </div>
@@ -592,7 +598,7 @@
 <div class="fbox-icon">
 <i class="icon-ok"></i>
 </div>
-<h3>Transparent Billing System </h3>
+<h5><b>Transparent Billing System </b></h5>
 <p>No more hidden charges & taxes. With our fixed price costings what you see is what you pay.</p>
 </div>
 </div>
@@ -603,8 +609,8 @@
 <div class="fbox-icon">
 <i class="icon-ok"></i>
 </div>
-<h3>50 Point Diagnosis of your Car</h3>
-<p>With our Extensive 50 Point Inspection procedure,Get a full report of your car's health & condition. </p>
+<h5><b>50 Point Diagnosis of your Car</b></h5>
+<p>With our Extensive 50 Point Inspection procedure,Get a full report of your car's health <br> & condition. </p>
 </div>
 </div>
 </div>
@@ -614,7 +620,7 @@
 <div class="fbox-icon">
 <i class="icon-ok"></i>
 </div>
-<h3>Free Pick & Drop</h3>
+<h5><b>Free Pick & Drop</b></h5>
 <p>Our services comes with free pick & drop facility so book from comfort of your home or office & leave everything on us. </p>
 </div>
 </div>
@@ -626,7 +632,7 @@
 <i class="icon-ok"></i>
 </div>
 <h3>30 Day Service Warranty</h3>
-<p>Customer satisfaction is what we seek, Always get a 30 Day warranty on our car service & repair packages.</p>
+<p>Customer satisfaction is what we seek, Always<br> get a 30 Day warranty on our car service & <br>repair packages.</p>
 </div>
 </div>
 </div>
@@ -1333,6 +1339,30 @@ document.forms['car'].elements['category'].onchange = function(e) {
     appendDataToSelect(rel, data);
     
 }());
+</script>
+<script>
+    $(document).ready(function(){
+        // click on button submit
+        $("#submit").on('click', function(){
+            // send ajax
+            $.ajax({
+                url: 'http://localhost:3000/getPricing', // url where to submit the request
+                type : "POST", // type of action POST || GET
+                dataType : 'json', // data type
+                data : $("#car").serialize(), // post data || get data
+                success : function(result) {
+                    // you can see the result from the console
+                    // tab of the developer tools
+                    console.log(result);
+                },
+                error: function(xhr, resp, text) {
+                    console.log(xhr, resp, text);
+                }
+            })
+        });
+    });
+
+
 </script>
 
 </body>
