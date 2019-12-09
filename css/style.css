@@ -114,8 +114,8 @@ select {
 
 .columns {
   float: left;
-  width: 33.3%;
-  padding: 8px;
+  width: 28%;
+  padding: 2px;
 }
 
 .price {
@@ -139,7 +139,7 @@ select {
 
 .price li {
   border-bottom: 1px solid #eee;
-  padding: 20px;
+  padding: 2px;
   text-align: center;
 }
 
