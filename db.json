@@ -30,6 +30,13 @@
       "fuel": "diesel",
       "service": "clutch",
       "id": "22222222222"
+    },
+    {
+      "category": "hyundai",
+      "choices": "Verna",
+      "fuel": "petrol",
+      "service": "clutch",
+      "id": "900"
     }
   ]
 }

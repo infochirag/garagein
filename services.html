@@ -56,6 +56,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
+<script src="store.js" async></script>
 </head>
 <body class="stretched">
 
@@ -143,7 +144,7 @@
 </header>
 <section id="page-title" class="page-title-parallax homeserchbg" data-stellar-background-ratio="0.3">
 <div class="container clearfix mainselect">
-<h1 class="white center">SERVICE SECTION</h1>
+<h1 class="center"><font color ="white">SERVICE SECTION</font></h1>
 <form id="widget-subscribe-form2" action="https://www.GarageIn.com/services" role="form" method="get" class="nobottommargin rightmarginbig" novalidate="novalidate" onsubmit="moengageSelectedModel()">
 
 <span id="model_err"></span>
@@ -180,11 +181,12 @@
   <!-- Panel 1 -->
  <div class="tab-pane fade" id="panel555" role="tabpanel">
 
-   
-<div class="columns">
+<div class = "container center">   
+<div class="columns center">
   <ul class="price">
-    <li class="header">Basic</li>
-    <li><b><h3>Rs. 1999</h3></b></li>
+    <li class="header"><span class="shop-item-title">Basic </span></li>
+    <img class="shop-item-image" src="Images/Album 1.png">
+    <li><span class="shop-item-price"><b><h3>Rs 1999</h3></b></span></li>
     <li><b>Air Filter : </b> Cleaned</li>
     <li><b>Oil Filter : </b> Replaced</li>
     <li><b>Engine Oil : </b> Replaced - Mineral</li>
@@ -193,14 +195,15 @@
     <li><b>Coolant : </b> Topup </li>
     <li><b>Spark Plugs : </b> Cleaned </li>
     <li><b>Car Wash : </b> Included </li>
-    <li class="grey"><a href="#" class="button">ADD TO CART</a></li>
+    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
   </ul>
 </div>
 
-<div class="columns">
+<div class="columns center">
   <ul class="price">
-    <li class="header" style="background-color:#4CAF50">Standard</li>
-    <li><b><h3>Rs. 2999</h3></b></li>
+    <li class="header" style="background-color:#4CAF50"><span class="shop-item-title">Standard</span></li>
+    <img class="shop-item-image" src="Images/Album 1.png">
+    <li><span class="shop-item-price"><b><h3>Rs 2999</h3></b></span></li>
     <li><b>Air Filter : </b> Replaced</li>
     <li><b>Oil Filter : </b> Replaced</li>
     <li><b>Engine Oil : </b> Replaced - 5W-30 FS</li>
@@ -213,14 +216,15 @@
     <li><b>Brake Fluid : </b> Topup </li>
     <li><b>Brake Pads : </b> Cleaned </li>
     <li><b>Tyre Rotation : </b> Included </li>
-    <li class="grey"><a href="#" class="button">ADD TO CART</a></li>
+    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
   </ul>
 </div>
 
-<div class="columns">
+<div class="columns center">
   <ul class="price">
-    <li class="header">Comprehensive</li>
-    <li><b><h3>Rs. 3999</h3></b></li>
+    <li class="header"><span class="shop-item-title">Comprehensive</span></li>
+    <img class="shop-item-image" src="Images/Album 1.png">
+    <li><span class="shop-item-price"><b><h3>Rs 1999</h3></b></span></li>
     <li><b>Air Filter : </b> Replaced</li>
     <li><b>Oil Filter : </b> Replaced</li>
     <li><b>Engine Oil : </b> Replaced - 5W-30 FS</li>
@@ -238,11 +242,14 @@
     <li><b>Fuel Filter : </b> Cleaned </li>
     <li><b>Gear Oil : </b> Topup </li>
     <li><b>Throttle Body : </b> Cleaned </li>
-    <li class="grey"><a href="#" class="button">ADD TO CART</a></li>
+    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
   </ul>
 </div>
 
   </div>
+</div>
+<br/>
+<br />
 
     <!-- Nav tabs -->
 
@@ -408,10 +415,114 @@
 <div class="oc-item"><img class="lozad" data-src="images/clients/18.png" alt="Force Motors"></div>
 <div class="oc-item"><img class="lozad" data-src="images/clients/19.png" alt="Mitsubishi"></div>
 <div class="oc-item"><img class="lozad" data-src="images/clients/20.png" alt="Volvo"></div>-->
+
 </div>
 </div>
 </div>
 </section>
+
+<!-- to be removed later -->
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-sm-3 col-md-3 col-lg-3">
+  <div class="shop-items">
+                <div class="shop-item center">
+                    <span class="shop-item-title center"><h3>DRY CLEANING</h3></span>
+<br/>
+                    <img class="shop-item-image" src="images/cars/dryclean.png">
+                    <div class="shop-item-details center">
+<br/>
+                        <span class="shop-item-price center"><h4>Rs 999</h4></span>
+<br/>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+</div>
+    </div>
+    <div class="col-sm-3 col-md-3 col-lg-3">
+  <div class="shop-items">
+                <div class="shop-item center">
+                    <span class="shop-item-title center"><h3>EXTERIOR RUB & POLISH </h3></span>
+<br />
+                    <img class="shop-item-image" src="images/cars/rub.png">
+                    <div class="shop-item-details center">
+<br />
+                        <span class="shop-item-price center"><h4>Rs 1199</h4></span>
+<br />
+                        <button class="btn btn-primary shop-item-button center" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+</div>
+    </div>
+    <div class="col-sm-3 col-md-3 col-lg-3">
+  <div class="shop-items">
+                <div class="shop-item center">
+                    <span class="shop-item-title center"><h3>WHEEL ALIGNMENT</h3></span>
+<br />
+                    <img class="shop-item-image" src="images/cars/wheel.png">
+                    <div class="shop-item-details center">
+<br />
+                        <span class="shop-item-price center"><h4>Rs 399</h4></span>
+<br />
+                        <button class="btn btn-primary shop-item-button center" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+</div>
+    </div>
+<div class="col-sm-3 col-md-3 col-lg-3">
+  <div class="shop-items">
+                <div class="shop-item center">
+                    <span class="shop-item-title center"><h3>WHEEL BALANCING</h3></span>
+<br />
+                    <img class="shop-item-image" src="images/cars/wheelbalance.png">
+                    <div class="shop-item-details center">
+<br />
+                        <span class="shop-item-price center"><h4>Rs 499</h4></span>
+<br />
+                        <button class="btn btn-primary shop-item-button center" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+</div>
+ </div>   
+<br />
+<br />
+<div class="container-fluid">
+<div class = "row">
+<br/>
+<br />
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">Rs. 0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+</div>        
+</div>
+
+
+
+
+</div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- That horrible sections ends here --> 
 
 <footer id="footer" class="dark notopborder">
 <div class="container">
